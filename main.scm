@@ -15,6 +15,8 @@
   (accept-player (current-input-port))
   (communicate))
 
+(debug (string-append "[pigman] Starting server on port " (number->string cfg-port) "~%"))
+
 ((make-tcp-server 
    (tcp-listen cfg-port) 
    listener)
